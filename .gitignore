@@ -1,7 +1,7 @@
-venv/
+﻿.venv/
 __pycache__/
-*.mp4
-*.avi
-*.pt
+*.pyc
+qdrant_storage/
+temp_crops/
+desktop.ini
 .env
-cctvProject_venv/

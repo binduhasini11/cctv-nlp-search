@@ -1,11 +1,6 @@
-from qdrant_client import QdrantClient
+"""Manual connectivity check; run with `python test_qdrant.py`."""
+from qdrant_store import get_client
 
-import streamlit as st
-client = QdrantClient(
-    url=st.secrets["QDRANT_URL"],
-    api_key=st.secrets["QDRANT_API_KEY"]
-)
-
-# Print existing collections to verify connection
-print("Connected to Qdrant!")
-print("Collections:", client.get_collections())
+if __name__ == "__main__":
+    client = get_client()
+    print("Connected to Qdrant. Collections:", client.get_collections())
